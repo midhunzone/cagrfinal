@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAGR Calculator</title>
+</head>
+<body>
+    <h1>CAGR Calculator</h1>
+    <form method="POST">
+        <label for="initial_amount">Initial Amount:</label>
+        <input type="number" id="initial_amount" name="initial_amount" step="0.01" required><br><br>
+        
+        <label for="cagr">CAGR (%):</label>
+        <input type="number" id="cagr" name="cagr" step="0.01" required><br><br>
+        
+        <label for="period">Period:</label>
+        <input type="number" id="period" name="period" step="0.01" required>
+        <select name="period_type">
+            <option value="years">Years</option>
+            <option value="months">Months</option>
+        </select><br><br>
+        
+        <input type="submit" value="Calculate">
+    </form>
+    {% if result %}
+    <h2>{{ result }}</h2>
+    {% endif %}
+</body>
+</html>
